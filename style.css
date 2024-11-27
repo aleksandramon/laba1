@@ -1,0 +1,80 @@
+:root {
+    --bg-color: rgb(147, 216, 246);
+    --text-color: black;
+  }
+   
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-color: rgb(29, 4, 96);
+      --text-color: white;
+    }
+  }
+
+body { 
+    font-family:"Playfair Display", serif;; 
+    font-size: 18px;
+    font-weight: 400; 
+    line-height: 1.6; 
+    margin: 0; 
+    padding: 20px; 
+    background-color: var(--bg-color); 
+  }
+
+
+.zagolovok {
+    font-family: 'Bookman', sans-serif;
+    color: var(--text-color);
+    text-align: center;
+    margin: 40px;
+}
+
+.text {
+    margin: 15px;
+    text-align: justify;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+    padding: 0;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    color: #469a02;
+    transform: scale(1.05); 
+}
+
+
+#top {
+    margin-top: 30px;
+}
+
+#myBtn:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.zagolovok ~ .text {
+    color: var(--text-color);
+}
+
+#myBtn {
+    background-color: #84abd5;
+    color: rgb(21, 8, 101);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#myBtn:hover {
+    background-color: #0056b3; 
+}
+
