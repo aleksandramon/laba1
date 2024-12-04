@@ -20,6 +20,21 @@ body {
     background-color: var(--bg-color); 
   }
 
+.header {
+    box-sizing: border-box;
+    display: block;
+    position: fixed;
+    top: 0;
+    padding-top: 10px;
+    height: 100px;
+    width:300px;
+    background-color: rgb(68, 160, 245);
+    border: #2e70b2 solid 5px;
+    border-radius: 5px; 
+    z-index: 1;
+    font-size: 32px;
+    padding: 15px;
+}
 
 .zagolovok {
     font-family: 'Bookman', sans-serif;
@@ -28,9 +43,25 @@ body {
     margin: 40px;
 }
 
+#pic1 {
+    position: relative;
+    left: 100px;
+}
+
+#pic2 {
+    position:absolute;
+    top: 820px; left:800px;
+}
+
 .text {
+    box-sizing: border-box;
+    min-height: 100px;
+    width: 1400px;
     margin: 15px;
     text-align: justify;
+    border: #0f2d4c solid 5px;
+    border-radius: 5px; 
+    padding: 10px;
 }
 
 ul {
@@ -72,6 +103,7 @@ a:hover {
     border-radius: 5px; 
     cursor: pointer;
     transition: background-color 0.3s;
+    z-index: 1;
 }
 
 #myBtn:hover {
