@@ -175,3 +175,14 @@ fieldset {
     align-items: center;
     gap: 1em;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: 0.35fr auto  400px  auto 100px;
+    grid-column-gap: 1cm;
+}
+
+.item {
+    grid-column-start: auto;
+    justify-self: center;
+}
