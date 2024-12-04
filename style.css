@@ -11,6 +11,7 @@
   }
 
 body { 
+    position: relative;
     font-family:"Playfair Display", serif;; 
     font-size: 18px;
     font-weight: 400; 
@@ -29,15 +30,15 @@ section {
     gap: 1em;
 }
 
-.header {
+header {
     box-sizing: border-box;
     display: block;
     position: fixed;
     top: 0;
     padding-top: 10px;
-    height: 100px;
-    width:300px;
-    background-color: rgba(68, 160, 245, 0.625);
+    height: 80px;
+    width:1200px;
+    background-color: rgb(68, 160, 245);
     border: #2e70b2 solid 5px;
     border-radius: 5px; 
     z-index: 1;
@@ -46,6 +47,7 @@ section {
 }
 
 .zagolovok {
+    position: relative;
     font-family: 'Bookman', sans-serif;
     color: var(--text-color);
     text-align: center;
@@ -83,10 +85,24 @@ section {
     padding: 10px;
 }
 
+.ss {
+    box-sizing: border-box;
+    border: #0f2d4c solid 5px;
+    border-radius: 5px;
+    padding: 1em;
+    display: flex;
+    margin: 10px;
+}
+
+#logo2 {
+    align: right;
+}
+
 ul {
     list-style-type: square;
     padding-left: 2em;
     padding: 0;
+    max-width: 300px;
 }
 
 a {
@@ -97,9 +113,24 @@ a {
 
 a:hover {
     color: #469a02;
-    transform: scale(1.05); 
+    transform: scale(1.02); 
 }
 
+.ss {
+    color:aliceblue;
+}
+
+.ss:active {
+    background-color: rgba(175, 250, 225, 0.951);
+}
+
+.ss:hover {
+    color:darkblue;
+}
+
+a:visited {
+    color:rgb(233, 215, 250);
+}
 
 #top {
     margin-top: 30px;
@@ -129,3 +160,18 @@ a:hover {
     background-color: #0056b3; 
 }
 
+footer {
+    background-color: #2e70b2b6;
+    margin-bottom: -50px;
+}
+
+
+
+fieldset {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1em;
+}
