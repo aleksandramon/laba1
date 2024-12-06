@@ -10,6 +10,11 @@
     }
   }
 
+::selection {
+    color:aliceblue;
+    background-color: #b22eabcc;
+}
+
 body { 
     position: relative;
     font-family:"Playfair Display", serif;; 
@@ -95,7 +100,7 @@ header {
 }
 
 #logo2 {
-    align: right;
+    box-align: right;
 }
 
 ul {
@@ -126,6 +131,10 @@ a:hover {
 
 .ss:hover {
     color:darkblue;
+}
+
+.ss:hover {
+    color:rgb(8, 8, 62);
 }
 
 a:visited {
@@ -185,4 +194,43 @@ fieldset {
 .item {
     grid-column-start: auto;
     justify-self: center;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
+#send:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+#send:active{
+    background-color: #2e70b2;
+    color:aliceblue;
+}
+
+.container::first-letter {
+    font-size: 2rem;
+}
+
+
+
+.item:nth-child(2n){
+    color:#842eb2;
+    background-color:#cfa4e6;
+}
+
+.item:nth-child(2n+1){
+    color:#cfa4e6;
+    background-color: #842eb2;;
+}
+
+legend {
+    color:#0f2d4c;
+}
+
+::placeholder {
+    color: #aa3fe3;
 }
