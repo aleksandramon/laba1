@@ -31,7 +31,7 @@ section {
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     gap: 1em;
 }
 
@@ -43,12 +43,12 @@ header {
     padding-top: 10px;
     height: 80px;
     width:1200px;
-    background-color: rgb(68, 160, 245);
     border: #2e70b2 solid 5px;
     border-radius: 5px; 
     z-index: 1;
     font-size: 32px;
     padding: 15px;
+    background-color: #0f2d4c;
 }
 
 .zagolovok {
@@ -75,8 +75,7 @@ header {
     border-radius: 2%;
     flex-grow: 1;
     flex-shrink: 1;
-    align-self: baseline;
-    
+    align-self: last baseline;   
 }
 
 .text {
@@ -170,8 +169,8 @@ a:visited {
 }
 
 footer {
-    background-color: #2e70b2b6;
     margin-bottom: -50px;
+    background-image: linear-gradient(to right, #2e70b2b6, white);
 }
 
 
@@ -194,6 +193,7 @@ fieldset {
 .item {
     grid-column-start: auto;
     justify-self: center;
+    box-shadow:8px 2px 20px 5px white;
 }
 
 .icon {
@@ -211,11 +211,13 @@ fieldset {
     color:aliceblue;
 }
 
-.container::first-letter {
+.item::first-letter {
     font-size: 2rem;
 }
 
-
+.item::after {
+    content:'!!!'
+}
 
 .item:nth-child(2n){
     color:#842eb2;
@@ -233,4 +235,42 @@ legend {
 
 ::placeholder {
     color: #aa3fe3;
+}
+
+#load {
+    height: 220px;
+}
+
+#load:hover #cart {
+    opacity: 1;
+}
+
+#load:hover #zagr {
+    opacity: 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+#cart {
+    opacity: 0;
+    transition: opacity 10s;
+    position: absolute;
+    margin-bottom: 40px;
+    z-index: 1;
+    max-width: 230px;
+}
+
+#zagr {
+    opacity: 1;
+    transition: opacity 10s;
+    animation: spin 10s infinite ;
+    width: 32px;
+    height: 32px;
+    margin-top: 50%;
+    margin-left: 50%;
+    margin-right: 50%;
 }
